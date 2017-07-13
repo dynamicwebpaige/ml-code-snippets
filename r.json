@@ -1,25 +1,15 @@
 {
 /*
-	// Place your snippets for R here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	"Print to console": {
-		"prefix": "log",
-		"body": [
-			"console.log('$1');",
-			"$2"
-		],
-		"description": "Log output to console"
-	}
+	// ===================================
+	// Machine Learning - Code Snippets
+	// ===================================
 */
 
 	"Neural Net": {
 	"prefix": "Neural Net",
 	"body": [
-		"library('neuralnet')",
-		"library()",
+		"library(neuralnet)",
+		"",
 		"# ==================",
 		"# BUILDING A MODEL",
 		"# ==================",
@@ -48,18 +38,93 @@
 	"Market Basket":{
 		"prefix": "Market Basket",
 		"body": [
-			"library(apriori)",
-			"",
-			"myrules <- apriori(data = mydata, parameter = ", 
-			"     list(support = 0.1, confidence = 0.8, minlen = 1))"
-		],
+		"library(arules)",
+		"",
+		"# =======================",
+		"# FIND ASSOCIATION RULES",
+		"# =======================",
+		"myrules <- apriori(data = mydata, parameter = )",
+		"      list(support = 0.1, confidence = 0.8, minlen = 1))",
+		"",
+		"# data = sparse item matrix holding transactional data",
+		"# support = minimum required rule support",
+		"# confidence = minimum required rule confidence",
+		"# minlen = minimum required rule items",
+		"",
+		"# ==========================",
+		"# EXAMINE ASSOCIATION RULES",
+		"# ==========================",
+		"inspect(myrules)",
+		"",
+		"# myrules = set of association rules using apriori() - see above",
+		"",
+		"# ======================",
+		"# VALIDATING THE MODEL",
+		"# ======================"
+	],
 		"description": "Implements market basket analysis using the apriori algorithm."	
 	},
 
 	"Naive Bayes": {
 		"prefix": "Naive Bayes",
-		"body": "testing",
-		"description": "Implementation of the Naive Bayes algorithm."
+		"body": [
+		"library(e1071)",
+		"",
+		"# ======================",
+		"# BUILDING A CLASSIFIER",
+		"# ======================",
+		"m <- naiveBayes(train, class, laplace = 0)",
+		"",
+		"# train = either a matrix or data frame with training data",
+		"# class = factor vector with the class for each row in the training data",
+		"# laplace = number to control the Laplace estimator",
+		"",
+		"# ====================",
+		"# MAKING PREDICTIONS  ",
+		"# ====================",
+		"p <- predict(m, test, type = 'class')",
+		"",
+		"# m = trained naiveBayes() model - see above",
+		"# test = data frame comprised of same features as training model",
+		"type = either 'class' or 'raw'; specifies whether the predictions should be",
+		"      most likely class value or raw predicted probabilities",
+		"",
+		"# ======================",
+		"# VALIDATING THE MODEL",
+		"# ======================"
+	],
+		"description": "Implementation of the Naive Bayes algorithm using the e1071 package."
+	},
+
+	"Decision Tree": {
+	"prefix": "Decision Tree",
+	"body": [
+		"library(C50)",
+		"",
+		"# ==================",
+		"# BUILDING A MODEL",
+		"# ==================",
+		"m <- C5.0(train, class, trials = 1, costs = NULL)",
+		"",
+		"# train = data frame containing the training data",
+		"# class = factor vector for each row in the training data",
+		"# trials = optional number to increase boosting iterations",
+		"# costs = optional matrix specifying costs for errors",
+		"",
+		"# ====================",
+		"# MAKING PREDICTIONS  ",
+		"# ====================",
+		"p <- predict(m, test, type = 'class')",
+		"",
+		"# m = trained C5.0() model - see above",
+		"# test = data frame comprised of same features as training model",
+		"type = either 'class' or 'prob'; specifies whether predictions should be most probable class, or raw predicted probabilities",
+		"",
+		"# ======================",
+		"# VALIDATING THE MODEL",
+		"# ======================"
+	],
+	"description": "Implements a C5.0 decision tree model using the 'C50' package."
 	}
 
 }
