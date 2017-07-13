@@ -125,6 +125,56 @@
 		"# ======================"
 	],
 	"description": "Implements a C5.0 decision tree model using the 'C50' package."
-	}
+	},
 
+	"kNN: k-Nearest Neighbor": {
+	"prefix": "kNN",
+	"body": [
+		"library(class)",
+		"",
+		"# ==================",
+		"# BUILDING A CLASSIFIER",
+		"# ==================",
+		"p <- knn(train, test, class, k)",
+		"",
+		"# train = data frame containing numeric training data",
+		"# test = data frame containing numeric test data",
+		"# class = factor vector with a class for each row in training data",
+		"# k = integer indicating the number of nearest neighbors",
+		"",
+		"# ======================",
+		"# VALIDATING THE MODEL",
+		"# ======================"
+	],
+	"description": "Implements k-Nearest Neighbors algorithm from the 'class' package."
+	},
+
+	"One-Rule Classifier": {
+		"prefix": "RWeka - OneR",
+		"body": [
+		"library(RWeka)",
+		"",
+		"# ======================",
+		"# BUILDING A CLASSIFIER",
+		"# ======================",
+		"m <- oneR(class ~ predictors, data = mydata)",
+		"",
+		"# class = column in mydata to be predicted",
+		"# predictors = R formula specifying features to use for prediction",
+		"# data = data frame containing class and predictors",
+		"",
+		"# ====================",
+		"# MAKING PREDICTIONS  ",
+		"# ====================",
+		"p <- predict(m, test)",
+		"",
+		"# m = trained oneR() model - see above",
+		"# test = data frame comprised of same features as training model",
+		"",
+		"# ======================",
+		"# VALIDATING THE MODEL",
+		"# ======================"
+	],
+		"description": "Implementation of a one-rule classifier using the RWeka package."
+	}
 }
