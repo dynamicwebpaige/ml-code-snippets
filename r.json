@@ -127,8 +127,8 @@
 	"description": "Implements a C5.0 decision tree model using the 'C50' package."
 	},
 
-	"kNN: k-Nearest Neighbor": {
-	"prefix": "kNN",
+	"kNearest Neighbor": {
+	"prefix": "kNearest Neighbor",
 	"body": [
 		"library(class)",
 		"",
@@ -149,8 +149,8 @@
 	"description": "Implements k-Nearest Neighbors algorithm from the 'class' package."
 	},
 
-	"One-Rule Classifier": {
-		"prefix": "RWeka - OneR",
+	"OneRule Classifier": {
+		"prefix": "OneRule Classifier",
 		"body": [
 		"library(RWeka)",
 		"",
@@ -270,8 +270,8 @@
 		"description": "Implementation of a support vector machine model using the ksvm package."
 	},
 
-	"k-Means Clustering": {
-	"prefix": "k-Means Clustering",
+	"kMeans Clustering": {
+	"prefix": "kMeans Clustering",
 	"body": [
 		"library(stats)",
 		"",
@@ -291,5 +291,5 @@
 		"myclusters$size # number of examples assigned to each cluster"
 	],
 	"description": "Implements k-means clustering algorithm from the 'stats' package."
-	},
+	}
 }
