@@ -8,5 +8,5 @@ A collection of code snippets for Python and R machine learning modules.
 * k-means Clustering
 * Market Basket Analysis
 * Artificial Neural Networks
-
-
+* Support Vector Machines
+* One-Rule Classifiers
