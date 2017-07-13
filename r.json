@@ -176,5 +176,97 @@
 		"# ======================"
 	],
 		"description": "Implementation of a one-rule classifier using the RWeka package."
+	},
+
+	"Multiple Linear Regression": {
+		"prefix": "Multiple Linear Regression",
+		"body": [
+		"library(stats)",
+		"",
+		"# =================",
+		"# BUILDING A MODEL",
+		"# =================",
+		"m <- lm(dv ~ iv, data = mydata)",
+		"",
+		"# dv = dependent variable in mydata to be predicted",
+		"# iv = R formula specifying independent variables to use for prediction",
+		"# data = data frame containing dv and iv",
+		"",
+		"# ====================",
+		"# MAKING PREDICTIONS  ",
+		"# ====================",
+		"p <- predict(m, test)",
+		"",
+		"# m = trained lm() model - see above",
+		"# test = data frame comprised of same features as training model",
+		"",
+		"# ======================",
+		"# VALIDATING THE MODEL",
+		"# ======================"
+	],
+		"description": "Implementation of a multiple linear regression model using the class package."
+	},
+
+	"Regression Trees": {
+		"prefix": "Regression Trees",
+		"body": [
+		"library(rpart)",
+		"",
+		"# =================",
+		"# BUILDING A MODEL",
+		"# =================",
+		"m <- rpart(dv ~ iv, data = mydata)",
+		"",
+		"# dv = dependent variable in mydata to be predicted",
+		"# iv = R formula specifying independent variables to use for prediction",
+		"# data = data frame containing dv and iv",
+		"",
+		"# ====================",
+		"# MAKING PREDICTIONS  ",
+		"# ====================",
+		"p <- predict(m, test, type = 'vector')",
+		"",
+		"# m = trained rpart() model - see above",
+		"# test = data frame comprised of same features as training model",
+		"# type = specifies the type of prediction to return ('vector', 'class', or 'prob')",
+		"",
+		"# ======================",
+		"# VALIDATING THE MODEL",
+		"# ======================"
+	],
+		"description": "Implementation of a regression trees model using the rpart package."
+	},
+
+	"Support Vector Machine": {
+		"prefix": "Support Vector Machine",
+		"body": [
+		"library(kernlab)",
+		"",
+		"# =================",
+		"# BUILDING A MODEL",
+		"# =================",
+		"m <- ksvm(target ~ predictors, data = mydata)",
+		"      kernel = 'rbfdot', C = 1)",
+		"",
+		"# target = outcome in mydata to be modeled",
+		"# predictors = R formula specifying features to use for prediction",
+		"# data = data frame containing target and predictors",
+		"# kernel = specifies nonlinear mapping (rbfdot, polydot, tanhdot, vanilladot)",
+		"# C = specifies cost of violating the constraints",
+		"",
+		"# ====================",
+		"# MAKING PREDICTIONS  ",
+		"# ====================",
+		"p <- predict(m, test, type = 'response')",
+		"",
+		"# m = trained ksvm() model - see above",
+		"# test = data frame comprised of same features as training model",
+		"# type = specifies the type of prediction to return ('response' or 'probabilities')",
+		"",
+		"# ======================",
+		"# VALIDATING THE MODEL",
+		"# ======================"
+	],
+		"description": "Implementation of a support vector machine model using the ksvm package."
 	}
 }
