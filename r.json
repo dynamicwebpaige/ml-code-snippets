@@ -268,5 +268,28 @@
 		"# ======================"
 	],
 		"description": "Implementation of a support vector machine model using the ksvm package."
-	}
+	},
+
+	"k-Means Clustering": {
+	"prefix": "k-Means Clustering",
+	"body": [
+		"library(stats)",
+		"",
+		"# ==================",
+		"# BUILDING CLUSTERS",
+		"# ==================",
+		"myclusters <- kmeans(mydata, k)",
+		"",
+		"# mydata = data frame with examples to be clustered",
+		"# k = desired number of clusters",
+		"",
+		"# ======================",
+		"# EXPLORING CLUSTERS",
+		"# ======================",
+		"myclusters$cluster # vector of cluster assignments",
+		"myclusters$centers # matrix of mean values for each feature/cluster combination",
+		"myclusters$size # number of examples assigned to each cluster"
+	],
+	"description": "Implements k-means clustering algorithm from the 'stats' package."
+	},
 }
