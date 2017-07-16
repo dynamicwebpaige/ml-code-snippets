@@ -10,3 +10,4 @@ A collection of code snippets for Python and R machine learning modules.
 * Artificial Neural Networks
 * Support Vector Machines
 * One-Rule Classifiers
+* Linear Support Vector Machines
