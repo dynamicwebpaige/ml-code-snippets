@@ -12,8 +12,11 @@ A collection of code snippets for Python and R machine learning modules. Python 
 * One-Rule Classifiers
 * Linear Support Vector Machines
 
+## Required R Packages
 `C50`
 
 `stats`
 
 `RWeka`
+
+## Required Python Packages
