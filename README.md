@@ -1,5 +1,5 @@
 # Machine Learning - Code Snippets
-A collection of code snippets for Python and R machine learning modules.
+A collection of code snippets for Python and R machine learning modules. Python machine learning tools are implemented via scikit-learn; R machine learning algorithms are from a variety of packages (see below).
 
 * Decision Trees
 * Random Forest
@@ -11,3 +11,9 @@ A collection of code snippets for Python and R machine learning modules.
 * Support Vector Machines
 * One-Rule Classifiers
 * Linear Support Vector Machines
+
+`C50`
+
+`stats`
+
+`RWeka`
