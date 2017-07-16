@@ -1,3 +1,5 @@
+# Note: update with scikit-learn added features from SciPy 2017.
+
 {
     "if": {
         "prefix": "if",
