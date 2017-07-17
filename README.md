@@ -19,4 +19,8 @@ A collection of code snippets for Python and R machine learning modules. Python 
 
 `RWeka`
 
+`rpart`
+
+`lm`
+
 ## Required Python Packages
