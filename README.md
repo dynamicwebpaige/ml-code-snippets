@@ -21,6 +21,4 @@ A collection of code snippets for Python and R machine learning modules. Python 
 
 `rpart`
 
-`lm`
-
 ## Required Python Packages
