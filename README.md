@@ -28,3 +28,9 @@ A collection of code snippets for Python and R machine learning modules. Python 
 `neuralnet`
 
 ## Required Python Packages
+
+`scikit-learn`
+
+`scikit-image`
+
+`pandas`
