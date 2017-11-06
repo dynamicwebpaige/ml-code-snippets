@@ -4,7 +4,7 @@
 
 * [Evading Machine Learning Malware Detection](https://www.blackhat.com/docs/us-17/thursday/us-17-Anderson-Bot-Vs-Bot-Evading-Machine-Learning-Malware-Detection-wp.pdf)
 
-* [Distributed Statistical Machine Learning in Adversarial Settings: Byzantine Gradient Descent](Distributed Statistical Machine Learning in Adversarial Settings: Byzantine Gradient Descent)
+* [Distributed Statistical Machine Learning in Adversarial Settings: Byzantine Gradient Descent](https://arxiv.org/pdf/1705.05491v2.pdf)
 
 * [Machine Learning as an Adversarial Service: Learning Black-Box Adversarial Examples](https://arxiv.org/pdf/1708.05207v1.pdf)
 
