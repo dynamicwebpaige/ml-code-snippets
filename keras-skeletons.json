@@ -47,47 +47,46 @@
 		"description": "Demonstrates the use of a convolutional LSTM network."
 	},
 
-	"Multiple Linear Regression": {
-		"prefix": "Multiple Linear Regression",
+	"Keras Vision: Image OCR": {
+		"prefix": "Keras Vision: Image OCR",
 		"body": [
 	],
-		"description": "Implementation of a multiple linear regression model using the class package."
+		"description": "Trains a convolutional stack followed by a recurrent stack and a CTC logloss to perform optical character recognition (OCR)."
 	},
 
-	"Regression Trees": {
-		"prefix": "Regression Trees",
+	"Keras Vision: MNIST Auxiliary Classifier GAN (AC-GAN)": {
+		"prefix": "Keras Vision: MNIST Auxiliary Classifier GAN (AC-GAN)",
 		"body": [
 	],
-		"description": "Implementation of a regression trees model using the rpart package."
+		"description": "Implementation of AC-GAN (Auxiliary Classifier GAN) on the MNIST dataset."
 	},
 
-	"Support Vector Machine": {
-		"prefix": "Support Vector Machine",
+	"Keras Vision: MNIST Hierarchical RNN (HRNN)": {
+		"prefix": "Keras Vision: MNIST Hierarchical RNN (HRNN)",
 		"body": [
 	],
-		"description": "Implementation of a support vector machine model using the ksvm package."
+		"description": "Trains a Hierarchical RNN (HRNN) to classify MNIST digits."
 	},
 
-	"kMeans Clustering": {
-	"prefix": "kMeans Clustering",
+	"Keras Vision: MNIST Siamese MLP": {
+	"prefix": "Keras Vision: MNIST Siamese MLP",
 	"body": [
-		"library(stats)",
-		"",
-		"# ==================",
-		"# BUILDING CLUSTERS",
-		"# ==================",
-		"myclusters <- kmeans(mydata, k)",
-		"",
-		"# mydata = data frame with examples to be clustered",
-		"# k = desired number of clusters",
-		"",
-		"# ======================",
-		"# EXPLORING CLUSTERS",
-		"# ======================",
-		"myclusters$cluster # vector of cluster assignments",
-		"myclusters$centers # matrix of mean values for each feature/cluster combination",
-		"myclusters$size # number of examples assigned to each cluster"
 	],
-	"description": "Implements k-means clustering algorithm from the 'stats' package."
+	"description": "Trains a Siamese multi-layer perceptron on pairs of digits from the MNIST dataset."
+	}
+	
+	
+	"Keras Vision: MNIST Stacked What-Where AutoEncoder (SWWAE)": {
+	"prefix": "Keras Vision: MNIST Stacked What-Where AutoEncoder (SWWAE)",
+	"body": [
+	],
+	"description": "Trains a Stacked What-Where AutoEncoder built on residual blocks on the MNIST dataset."
+	}
+
+	"Keras Vision: MNIST Transfer Learning CNN": {
+	"prefix": "Keras Vision: MNIST Transfer Learning CNN",
+	"body": [
+	],
+	"description": "Toy example; transfer learning using a convolutional neural network on the MNIST dataset."
 	}
 }
