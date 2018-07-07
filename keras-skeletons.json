@@ -5,204 +5,51 @@
 	// ===================================
 */
 
-	"Addition RNN": {
-	"prefix": "Addition RNN",
+	"Keras Sequence: Addition RNN": {
+	"prefix": "Keras Sequence: Addition RNN",
 	"body": [
-		"library(neuralnet)",
-		"",
-		"# ==================",
-		"# BUILDING A MODEL",
-		"# ==================",
-		"m <- neuralnet(target ~ predictors, data = data, hidden = 1)",
-		"",
-		"# target = outcome in the 'data' frame to be modeled",
-		"# predictors = R formula specifying features in 'data' to be used for prediction",
-		"# data = data frame containing 'target' and 'predictors'",
-		"# hidden = specifies the number of neurons in the hidden layer",
-		"",
-		"# ====================",
-		"# MAKING PREDICTIONS  ",
-		"# ====================",
-		"p <- compute(m, test)",
-		"",
-		"# m = trained neuralnet() model - see above",
-		"# test = data frame comprised of same features as training model",
-		"",
-		"# ======================",
-		"# VALIDATING THE MODEL",
-		"# ======================"
 	],
 	"description": "An implementation of sequence to sequence learning for performing addition."
 	},
 
-	"Market Basket":{
-		"prefix": "Market Basket",
+	"Keras Vision: MNIST Multi-Layer Perceptron (MLP)":{
+		"prefix": "Keras Vision: MNIST Multi-Layer Perceptron (MLP)",
 		"body": [
-		"library(arules)",
-		"",
-		"# =======================",
-		"# FIND ASSOCIATION RULES",
-		"# =======================",
-		"myrules <- apriori(data = mydata, parameter = )",
-		"      list(support = 0.1, confidence = 0.8, minlen = 1))",
-		"",
-		"# data = sparse item matrix holding transactional data",
-		"# support = minimum required rule support",
-		"# confidence = minimum required rule confidence",
-		"# minlen = minimum required rule items",
-		"",
-		"# ==========================",
-		"# EXAMINE ASSOCIATION RULES",
-		"# ==========================",
-		"inspect(myrules)",
-		"",
-		"# myrules = set of association rules using apriori() - see above",
-		"",
-		"# ======================",
-		"# VALIDATING THE MODEL",
-		"# ======================"
 	],
-		"description": "Implements market basket analysis using the apriori algorithm."	
+		"description": "Trains a simple deep multi-layer perceptron on the MNIST dataset."	
 	},
 
-	"Naive Bayes": {
-		"prefix": "Naive Bayes",
+	"Keras Vision: MNIST CNN": {
+		"prefix": "Keras Vision: MNIST CNN",
 		"body": [
-		"library(e1071)",
-		"",
-		"# ======================",
-		"# BUILDING A CLASSIFIER",
-		"# ======================",
-		"m <- naiveBayes(train, class, laplace = 0)",
-		"",
-		"# train = either a matrix or data frame with training data",
-		"# class = factor vector with the class for each row in the training data",
-		"# laplace = number to control the Laplace estimator",
-		"",
-		"# ====================",
-		"# MAKING PREDICTIONS  ",
-		"# ====================",
-		"p <- predict(m, test, type = 'class')",
-		"",
-		"# m = trained naiveBayes() model - see above",
-		"# test = data frame comprised of same features as training model",
-		"type = either 'class' or 'raw'; specifies whether the predictions should be",
-		"      most likely class value or raw predicted probabilities",
-		"",
-		"# ======================",
-		"# VALIDATING THE MODEL",
-		"# ======================"
 	],
-		"description": "Implementation of the Naive Bayes algorithm using the e1071 package."
+		"description": "Trains a simple convnet on the MNIST dataset."
 	},
 
-	"Decision Tree": {
-	"prefix": "Decision Tree",
+	"Keras Vision: CIFAR10 CNN": {
+	"prefix": "Keras Vision: CIFAR10 CNN",
 	"body": [
-		"library(C50)",
-		"",
-		"# ==================",
-		"# BUILDING A MODEL",
-		"# ==================",
-		"m <- C5.0(train, class, trials = 1, costs = NULL)",
-		"",
-		"# train = data frame containing the training data",
-		"# class = factor vector for each row in the training data",
-		"# trials = optional number to increase boosting iterations",
-		"# costs = optional matrix specifying costs for errors",
-		"",
-		"# ====================",
-		"# MAKING PREDICTIONS  ",
-		"# ====================",
-		"p <- predict(m, test, type = 'class')",
-		"",
-		"# m = trained C5.0() model - see above",
-		"# test = data frame comprised of same features as training model",
-		"type = either 'class' or 'prob'; specifies whether predictions should be most probable class, or raw predicted probabilities",
-		"",
-		"# ======================",
-		"# VALIDATING THE MODEL",
-		"# ======================"
 	],
-	"description": "Implements a C5.0 decision tree model using the 'C50' package."
+	"description": "Trains a simple deep CNN on the CIFAR10 small images dataset."
 	},
 
-	"kNearest Neighbor": {
-	"prefix": "kNearest Neighbor",
+	"Keras Vision: CIFAR10 ResNet": {
+	"prefix": "Keras Vision: CIFAR10 ResNet",
 	"body": [
-		"library(class)",
-		"",
-		"# ==================",
-		"# BUILDING A CLASSIFIER",
-		"# ==================",
-		"p <- knn(train, test, class, k)",
-		"",
-		"# train = data frame containing numeric training data",
-		"# test = data frame containing numeric test data",
-		"# class = factor vector with a class for each row in training data",
-		"# k = integer indicating the number of nearest neighbors",
-		"",
-		"# ======================",
-		"# VALIDATING THE MODEL",
-		"# ======================"
 	],
-	"description": "Implements k-Nearest Neighbors algorithm from the 'class' package."
+	"description": "Trains a ResNet on the CIFAR10 small images dataset."
 	},
 
-	"OneRule Classifier": {
-		"prefix": "OneRule Classifier",
+	"Keras Vision: Convolutional LSTM": {
+		"prefix": "Keras Vision: Convolutional LSTM",
 		"body": [
-		"library(RWeka)",
-		"",
-		"# ======================",
-		"# BUILDING A CLASSIFIER",
-		"# ======================",
-		"m <- oneR(class ~ predictors, data = mydata)",
-		"",
-		"# class = column in mydata to be predicted",
-		"# predictors = R formula specifying features to use for prediction",
-		"# data = data frame containing class and predictors",
-		"",
-		"# ====================",
-		"# MAKING PREDICTIONS  ",
-		"# ====================",
-		"p <- predict(m, test)",
-		"",
-		"# m = trained oneR() model - see above",
-		"# test = data frame comprised of same features as training model",
-		"",
-		"# ======================",
-		"# VALIDATING THE MODEL",
-		"# ======================"
 	],
-		"description": "Implementation of a one-rule classifier using the RWeka package."
+		"description": "Demonstrates the use of a convolutional LSTM network."
 	},
 
 	"Multiple Linear Regression": {
 		"prefix": "Multiple Linear Regression",
 		"body": [
-		"library(stats)",
-		"",
-		"# =================",
-		"# BUILDING A MODEL",
-		"# =================",
-		"m <- lm(dv ~ iv, data = mydata)",
-		"",
-		"# dv = dependent variable in mydata to be predicted",
-		"# iv = R formula specifying independent variables to use for prediction",
-		"# data = data frame containing dv and iv",
-		"",
-		"# ====================",
-		"# MAKING PREDICTIONS  ",
-		"# ====================",
-		"p <- predict(m, test)",
-		"",
-		"# m = trained lm() model - see above",
-		"# test = data frame comprised of same features as training model",
-		"",
-		"# ======================",
-		"# VALIDATING THE MODEL",
-		"# ======================"
 	],
 		"description": "Implementation of a multiple linear regression model using the class package."
 	},
@@ -210,29 +57,6 @@
 	"Regression Trees": {
 		"prefix": "Regression Trees",
 		"body": [
-		"library(rpart)",
-		"",
-		"# =================",
-		"# BUILDING A MODEL",
-		"# =================",
-		"m <- rpart(dv ~ iv, data = mydata)",
-		"",
-		"# dv = dependent variable in mydata to be predicted",
-		"# iv = R formula specifying independent variables to use for prediction",
-		"# data = data frame containing dv and iv",
-		"",
-		"# ====================",
-		"# MAKING PREDICTIONS  ",
-		"# ====================",
-		"p <- predict(m, test, type = 'vector')",
-		"",
-		"# m = trained rpart() model - see above",
-		"# test = data frame comprised of same features as training model",
-		"# type = specifies the type of prediction to return ('vector', 'class', or 'prob')",
-		"",
-		"# ======================",
-		"# VALIDATING THE MODEL",
-		"# ======================"
 	],
 		"description": "Implementation of a regression trees model using the rpart package."
 	},
@@ -240,32 +64,6 @@
 	"Support Vector Machine": {
 		"prefix": "Support Vector Machine",
 		"body": [
-		"library(kernlab)",
-		"",
-		"# =================",
-		"# BUILDING A MODEL",
-		"# =================",
-		"m <- ksvm(target ~ predictors, data = mydata)",
-		"      kernel = 'rbfdot', C = 1)",
-		"",
-		"# target = outcome in mydata to be modeled",
-		"# predictors = R formula specifying features to use for prediction",
-		"# data = data frame containing target and predictors",
-		"# kernel = specifies nonlinear mapping (rbfdot, polydot, tanhdot, vanilladot)",
-		"# C = specifies cost of violating the constraints",
-		"",
-		"# ====================",
-		"# MAKING PREDICTIONS  ",
-		"# ====================",
-		"p <- predict(m, test, type = 'response')",
-		"",
-		"# m = trained ksvm() model - see above",
-		"# test = data frame comprised of same features as training model",
-		"# type = specifies the type of prediction to return ('response' or 'probabilities')",
-		"",
-		"# ======================",
-		"# VALIDATING THE MODEL",
-		"# ======================"
 	],
 		"description": "Implementation of a support vector machine model using the ksvm package."
 	},
